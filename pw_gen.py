@@ -20,11 +20,13 @@ try:
         if status_number.get():
             pool += string.digits
         if password_lenght.get() == "":
-            label_pwlenght = tk.Label(root, text="Please enter a password length", font=("Arial", 16))
+            label_pwlenght = tk.Label(root, text="Please enter a password length", font=("Arial", 10), fg="red")
             label_pwlenght.pack(pady=20)
+            return
         if pool == "":
-            label_pwlenght = tk.Label(root, text="Please select at least one option", font=("Arial", 16))
+            label_pwlenght = tk.Label(root, text="Please select at least one option", font=("Arial", 10), fg="red")
             label_pwlenght.pack(pady=20)
+            return
 
         else:
             for i in range(int(password_lenght.get())):
